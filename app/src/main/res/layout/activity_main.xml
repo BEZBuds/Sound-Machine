@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_image">
+
+    <Button
+        android:id="@+id/button_white_noise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_white_noise"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/button_rain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_rain"
+        android:layout_margin="8dp"
+        android:layout_below="@id/button_white_noise" />
+
+    <Button
+        android:id="@+id/button_rain_thunder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_rain_thunder"
+        android:layout_margin="8dp"
+        android:layout_below="@id/button_rain" />
+
+    <Button
+        android:id="@+id/button_ocean"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_ocean"
+        android:layout_margin="8dp"
+        android:layout_below="@id/button_rain_thunder" />
+
+    <Button
+        android:id="@+id/button_brook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_brook"
+        android:layout_margin="8dp"
+        android:layout_below="@id/button_ocean" />
+
+    <SeekBar
+        android:id="@+id/volume_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@id/button_brook"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/button_pause"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/ic_pause"
+        android:layout_margin="20dp"
+        android:layout_below="@id/volume_control"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/content_description_pause"/>
+
+    <Button
+        android:id="@+id/button_start_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_start_timer"
+        android:textColor="@android:color/white"
+        android:background="#80000000"
+        android:padding="8dp"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:layout_below="@id/button_pause"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/timer_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/button_start_timer"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:baselineAligned="false">
+
+            <TextView
+                android:id="@+id/timer_hours_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timer_hours_label"
+                android:textColor="@android:color/white"
+                android:background="#80000000"
+                android:padding="4dp"
+                android:shadowColor="#80000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"/>
+
+            <NumberPicker
+                android:id="@+id/timer_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/semi_transparent_light_background"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:baselineAligned="false">
+
+            <TextView
+                android:id="@+id/timer_minutes_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/timer_minutes_label"
+                android:textColor="@android:color/white"
+                android:background="#80000000"
+                android:padding="4dp"
+                android:shadowColor="#80000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="3"/>
+
+            <NumberPicker
+                android:id="@+id/timer_minutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/semi_transparent_light_background"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
